@@ -15,32 +15,15 @@ def main():
     root.minsize(width=400,height=400)
     root.geometry("600x500")
 
-    same = True
-    n = 0.50
+    # background Color
+    Canvas1 = Canvas(root)
+    Canvas1.config(bg="darksalmon")
+    Canvas1.pack(expand=True, fill=BOTH)
 
-    # Adding a background image
-    background_image = Image.open("library.jpg")
-    [imageSizeWidth, imageSizeHeight] = background_image.size
-
-    newImageSizeWidth = int(imageSizeWidth * n)
-    if same:
-        newImageSizeHeight = int(imageSizeHeight * n)
-    else:
-        newImageSizeHeight = int(imageSizeHeight / n)
-
-            # background_image = background_image.resize((newImageSizeWidth, newImageSizeHeight), Image.ANTIALIAS)
-            # img = ImageTk.PhotoImage(background_image)
-
-            #  Canvas1 = Canvas(root)
-
-            # Canvas1.create_image(600, 640, image=img)
-            # Canvas1.config(bg="white", width=newImageSizeWidth, height=newImageSizeHeight)
-            # Canvas1.pack(expand=True, fill=BOTH)
-
-    headingFrame1 = Frame(root, bg="#FFBB00", bd=5)
+    headingFrame1 = Frame(root, bg="darksalmon", bd=5)
     headingFrame1.place(relx=0.2, rely=0.1, relwidth=0.6, relheight=0.16)
 
-    headingLabel = Label(headingFrame1, text="Welcome to \n Lambton Library", bg='black', fg='white',
+    headingLabel = Label(headingFrame1, text="Welcome to \n Lambton Library", bg='gold', fg='black',
                         font=('Courier', 15))
     headingLabel.place(relx=0, rely=0, relwidth=1, relheight=1)
 
@@ -53,7 +36,7 @@ def main():
     btn3 = Button(root, text="View Book List", bg='black', fg='white', command=View)
     btn3.place(relx=0.28, rely=0.6, relwidth=0.45, relheight=0.1)
 
-    btn4 = Button(root, text="Issue Book to Student", bg='black', fg='white', command=issueBook)
+    btn4 = Button(root, text="Issue Book ", bg='black', fg='white', command=issueBook)
     btn4.place(relx=0.28, rely=0.7, relwidth=0.45, relheight=0.1)
 
     btn5 = Button(root, text="Return Book", bg='black', fg='white', command=returnBook)

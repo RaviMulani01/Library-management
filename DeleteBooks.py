@@ -42,16 +42,16 @@ def delete():
     global bookInfo1, bookInfo2, bookInfo3, bookInfo4, Canvas1, con, cur, bookTable, root
 
     root = Tk()
-    root.title("Library")
+    root.title("Delete Book From Library")
     root.minsize(width=400, height=400)
     root.geometry("600x500")
 
     Canvas1 = Canvas(root)
 
-    Canvas1.config(bg="#006B38")
+    Canvas1.config(bg="indianred")
     Canvas1.pack(expand=True, fill=BOTH)
 
-    headingFrame1 = Frame(root, bg="#FFBB00", bd=5)
+    headingFrame1 = Frame(root, bg="#FFBB00", bd=2)
     headingFrame1.place(relx=0.25, rely=0.1, relwidth=0.5, relheight=0.13)
 
     headingLabel = Label(headingFrame1, text="Delete Book", bg='black', fg='white', font=('Courier', 15))

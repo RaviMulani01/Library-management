@@ -3,7 +3,7 @@ import MySQLdb
 from tkinter import *
 from PIL import ImageTk, Image
 from tkinter import messagebox
-import pymysql
+import matplotlib.pyplot as plt
 
 
 def bookRegister():
@@ -39,19 +39,19 @@ def addBook():
     global bookInfo1, bookInfo2, bookInfo3, bookInfo4, Canvas1, con, cur, bookTable, root
 
     root = Tk()
-    root.title("Library")
+    root.title("Add New Book In System")
     root.minsize(width=400, height=400)
     root.geometry("600x500")
-
+   
     # Enter Table Names here
     books = "books"  # Book Table
 
     Canvas1 = Canvas(root)
 
-    Canvas1.config(bg="#ff6e40")
+    Canvas1.config(bg="#cc6677")
     Canvas1.pack(expand=True, fill=BOTH)
 
-    headingFrame1 = Frame(root, bg="#FFBB00", bd=5)
+    headingFrame1 = Frame(root, bg="#FFBB00", bd=2)
     headingFrame1.place(relx=0.25, rely=0.1, relwidth=0.5, relheight=0.13)
 
     headingLabel = Label(headingFrame1, text="Add Books", bg='black', fg='white', font=('Courier', 15))

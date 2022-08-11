@@ -9,15 +9,15 @@ import MySQLdb
 
 def View():
     root = Tk()
-    root.title("Library")
+    root.title("View All Book")
     root.minsize(width=400, height=400)
     root.geometry("600x500")
 
     Canvas1 = Canvas(root)
-    Canvas1.config(bg="#12a4d9")
+    Canvas1.config(bg="#88ccee")
     Canvas1.pack(expand=True, fill=BOTH)
 
-    headingFrame1 = Frame(root, bg="#FFBB00", bd=5)
+    headingFrame1 = Frame(root, bg="#FFBB00", bd=2)
     headingFrame1.place(relx=0.25, rely=0.1, relwidth=0.5, relheight=0.13)
 
     headingLabel = Label(headingFrame1, text="View Books", bg='black', fg='white', font=('Courier', 15))
